@@ -1,7 +1,7 @@
 import { usePatientStore } from "../store"
 import { Patient } from "../types"
 import PatientDetailItem from "./PatientDetailItem"
-import {toast} from 'react-toastify';
+import { toast } from 'react-toastify';
 
 
 
@@ -14,7 +14,7 @@ export default function PatientDetails({ patient }: PatientDetailsProps) {
 
   const { deletePatient, getPatientById } = usePatientStore()
 
-  const handleClick = ()=>{
+  const handleClick = () => {
     deletePatient(patient.id)
     toast.error('Paciente Actualizado Correctamente')
   }
